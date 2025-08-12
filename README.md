@@ -28,3 +28,50 @@ The tutorial walks you through setting up your Spring Boot backend, connecting t
 ---
 
 ## 📂 Project Structure
+
+src/
+└── main/
+├── java/
+│ └── com.example.deepseek
+│ ├── controller/ # API endpoints
+│ ├── service/ # Business logic
+│ ├── config/ # API key & client configuration
+│ └── model/ # Request/response objects
+└── resources/
+└── application.yml # Configurations
+
+
+---
+
+## ⚙️ Setup & Installation
+
+1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/liyabonasaki/springboot-deepseek-ai.git
+cd springboot-deepseek-ai 
+```
+
+2️⃣ **Configure DeepSeek API Key**
+
+``
+deepseek:
+api-key: YOUR_DEEPSEEK_API_KEY
+base-url: https://api.deepseek.com/v1
+``
+
+3️⃣ **Build & Run the Project**
+```
+mvn clean install
+mvn spring-boot:run
+```
+
+4️⃣ **Test the API**
+```
+curl -X POST http://localhost:8080/api/ai/complete \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "Explain microservices in simple terms"}'
+```
+
+
+
+
