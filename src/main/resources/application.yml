@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: deepseek-springboot-ai
+
+server:
+  port: 8080
+
+deepseek:
+  api-url: https://api.deepseek.com/v1/chat/completions
+  api-key:
+#  api-key: ${DEEPSEEK_API_KEY}s
